@@ -5,7 +5,7 @@ This site highlights my expertise through an elegant, responsive design that’s
 
 ---
 ## 🚀 Live Demo
-(https://damarlasanjanaportfolio.netlify.app/))
+(https://damarlasanjanaportfolio.netlify.app/)
 
 ## 🚀 About This Project
 Built using modern web technologies with a focus on:
