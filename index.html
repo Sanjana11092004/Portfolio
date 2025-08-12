@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* Animated gradient background */
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .animated-gradient {
+      background: linear-gradient(135deg, rgba(147, 51, 234, 0.6), rgba(20, 184, 166, 0.6), rgba(147, 51, 234, 0.6));
+      background-size: 300% 300%;
+      animation: gradientMove 10s ease infinite;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+<!-- Header -->
+<header class="fixed w-full top-0 z-50 animated-gradient backdrop-blur-md border-b border-white/20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-center items-center py-4">
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex justify-between w-full max-w-4xl">
+        <a href="#about" class="hover:text-purple-200 transition duration-300">About</a>
+        <a href="#skills" class="hover:text-purple-200 transition duration-300">Skills</a>
+        <a href="#experience" class="hover:text-purple-200 transition duration-300">Experience</a>
+        <a href="#Project" class="hover:text-purple-200 transition duration-300">Project</a>
+        <a href="#education" class="hover:text-purple-200 transition duration-300">Education</a>
+        <a href="#certificates" class="hover:text-purple-200 transition duration-300">Certificates</a>
+        <a href="#contact" class="hover:text-purple-200 transition duration-300">Contact</a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden flex flex-col space-y-1 absolute right-4">
+        <span class="w-6 h-0.5 bg-white"></span>
+        <span class="w-6 h-0.5 bg-white"></span>
+        <span class="w-6 h-0.5 bg-white"></span>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- Mobile Nav -->
+  <div id="mobile-menu" class="hidden md:hidden flex flex-col space-y-4 px-6 pb-4 items-center">
+    <a href="#about" class="hover:text-purple-200">About</a>
+    <a href="#skills" class="hover:text-purple-200">Skills</a>
+    <a href="#experience" class="hover:text-purple-200">Experience</a>
+    <a href="#projects" class="hover:text-purple-200">Projects</a>
+    <a href="#education" class="hover:text-purple-200">Education</a>
+    <a href="#certificates" class="hover:text-purple-200">Certificates</a>
+    <a href="#contact" class="hover:text-purple-200">Contact</a>
+  </div>
+</header>
+
+<!-- About Section (fixed & dark theme) -->
+<section id="about" class="bg-gray-900 text-white pt-28 pb-10">
+  <div class="max-w-5xl mx-auto px-6">
+    <!-- Section title (number + About + thin gradient rule) -->
+    <div class="mb-8 flex items-center gap-4">
+      <h2 class="text-3xl md:text-4xl font-extrabold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-teal-400">About</h2>
+      <div class="flex-1 h-px bg-gradient-to-r from-purple-600 via-teal-400 to-transparent opacity-30 ml-4"></div>
+    </div>
+ 
+
+    <!-- Profile row: image (left) + name/role/tagline (right) -->
+<div class="flex flex-col md:flex-row items-start md:items-center gap-8 md:pl-32">
+  <!-- Circular Image with purple-teal ring -->
+  <div class="flex-shrink-0">
+    <div class="rounded-full p-1 bg-gradient-to-tr from-purple-500 to-teal-400">
+      <div class="w-40 h-40 md:w-48 md:h-48 bg-gray-800 rounded-full overflow-hidden flex items-center justify-center">
+        <!-- Drive image (direct-display format) -->
+        <img
+          src="images\profile.png"
+          alt="Damarla Sanjana"
+          class="w-full h-full object-cover"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- Name / Role / Tagline aligned to image height -->
+  <div class="flex-1">
+    <!-- This wrapper has the same height as the image to ensure vertical alignment -->
+    <div class="h-40 md:h-48 flex flex-col justify-center text-center md:text-left">
+      <h3 class="text-3xl md:text-4xl font-extrabold leading-tight bg-gradient-to-r from-purple-400 to-teal-500 bg-clip-text text-transparent">Damarla Sanjana</h3>
+      <p class="text-xl text-teal-300 font-semibold mt-1">Software Developer</p>
+      <p class="text-md italic text-purple-200 mt-2">
+        Transforming Ideas into Seamless Digital Experiences
+      </p>
+    </div>               
+  </div>
+</div>
+
+    <p class="mt-10 text-lg md:text-xl text-center leading-relaxed max-w-5xl mx-auto">
+      I am a motivated Computer Science undergraduate with a passion for crafting elegant, user-friendly, and efficient digital solutions.
+      My experience spans academic projects, internships, and personal explorations that have strengthened my skills in both frontend
+      and backend development. I thrive in collaborative environments where ideas transform into impactful results. I am dedicated to 
+      lifelong learning, adapting to emerging technologies, and delivering results that exceed expectations.
+    </p>
+
+    <!-- Buttons centered -->
+    <div class="mt-8 flex justify-center gap-4">
+      <a
+        href="https://drive.google.com/file/d/1f9JETMhq_Llp2k6f9820XTe5hPwWlAa8/view?usp=sharing"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="px-6 py-3 rounded-md bg-gradient-to-r from-purple-600 to-teal-400 text-white font-medium shadow-md hover:opacity-95 transition"
+      >
+        Resume
+      </a>
+
+      <a
+        href="#contact"
+        class="px-6 py-3 rounded-md border border-purple-600 text-purple-200 hover:bg-purple-600/10 transition"
+      >
+        Contact
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="bg-gray-900 text-white pt-16 pb-10">
+  <div class="max-w-5xl mx-auto px-6">
+    <!-- Section title (number + About + thin gradient rule) -->
+    <div class="mb-8 flex items-center gap-4">
+      <h2 class="text-3xl md:text-4xl font-extrabold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-teal-400">Skills</h2>
+      <div class="flex-1 h-px bg-gradient-to-r from-purple-600 via-teal-400 to-transparent opacity-30 ml-4"></div>
+    </div>
+
+  <!-- Skills Grid -->
+  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 justify-items-center">
+    
+    <!-- Skill Card -->
+    <div class="w-32 h-28 flex flex-col items-center justify-center rounded-xl bg-gradient-to-tr from-purple-500/30 to-teal-400/30 backdrop-blur-md shadow-lg border border-white/10">
+      <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/badge-html-5-128.png" alt="HTML" class="w-12 h-12 mb-2" />
+      <p class="text-sm font-semibold">HTML</p>
+    </div>
+
+    <div class="w-32 h-28 flex flex-col items-center justify-center rounded-xl bg-gradient-to-tr from-purple-500/30 to-teal-400/30 backdrop-blur-md shadow-lg border border-white/10">
+      <img src="https://cdn-icons-png.flaticon.com/128/732/732190.png" alt="CSS" class="w-12 h-12 mb-2" />
+      <p class="text-sm font-semibold">CSS</p>
+    </div>
+
+    <div class="w-32 h-28 flex flex-col items-center justify-center rounded-xl bg-gradient-to-tr from-purple-500/30 to-teal-400/30 backdrop-blur-md shadow-lg border border-white/10">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript" class="w-12 h-12 mb-2" />
+      <p class="text-sm font-semibold">JavaScript</p>
+    </div>
+
+    <div class="w-32 h-28 flex flex-col items-center justify-center rounded-xl bg-gradient-to-tr from-purple-500/30 to-teal-400/30 backdrop-blur-md shadow-lg border border-white/10">
+      <img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="Java" class="w-12 h-12 mb-2" />
+      <p class="text-sm font-semibold">Java</p>
+    </div>
+
+    <div class="w-32 h-28 flex flex-col items-center justify-center rounded-xl bg-gradient-to-tr from-purple-500/30 to-teal-400/30 backdrop-blur-md shadow-lg border border-white/10">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React" class="w-12 h-12 mb-2" />
+      <p class="text-sm font-semibold">React</p>
+    </div>
+
+    <div class="w-32 h-28 flex flex-col items-center justify-center rounded-xl bg-gradient-to-tr from-purple-500/30 to-teal-400/30 backdrop-blur-md shadow-lg border border-white/10">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Visual_Studio_Code_1.35_icon.svg" alt="VS Code" class="w-12 h-12 mb-2" />
+      <p class="text-sm font-semibold">VS Code</p>
+    </div>
+
+    <div class="w-32 h-28 flex flex-col items-center justify-center rounded-xl bg-gradient-to-tr from-purple-500/30 to-teal-400/30 backdrop-blur-md shadow-lg border border-white/10">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma" class="w-12 h-12 mb-2" />
+      <p class="text-sm font-semibold">Figma</p>
+    </div>
+
+    <div class="w-32 h-28 flex flex-col items-center justify-center rounded-xl bg-gradient-to-tr from-purple-500/30 to-teal-400/30 backdrop-blur-md shadow-lg border border-white/10">
+      <img src="https://cdn4.iconfinder.com/data/icons/apps-2025/512/Canva-128.png" alt="Canva" class="w-12 h-12 mb-2" />
+      <p class="text-sm font-semibold">Canva</p>
+    </div>
+
+    <div class="w-32 h-28 flex flex-col items-center justify-center rounded-xl bg-gradient-to-tr from-purple-500/30 to-teal-400/30 backdrop-blur-md shadow-lg border border-white/10">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" class="w-12 h-12 mb-2" />
+      <p class="text-sm font-semibold">GitHub</p>
+    </div>
+
+    <div class="w-32 h-28 flex flex-col items-center justify-center rounded-xl bg-gradient-to-tr from-purple-500/30 to-teal-400/30 backdrop-blur-md shadow-lg border border-white/10">
+      <img src="https://cdn2.iconfinder.com/data/icons/boxicons-logos/24/bxl-tailwind-css-128.png" alt="Tailwind" class="w-12 h-12 mb-2" />
+      <p class="text-sm font-semibold">Tailwind</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience" class="bg-gray-900 text-white pt-16 pb-20">
+  <div class="max-w-5xl mx-auto px-6">
+    <!-- Section title -->
+    <div class="mb-8 flex items-center gap-4">
+      <h2 class="text-3xl md:text-4xl font-extrabold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-teal-400">Experience</h2>
+      <div class="flex-1 h-px bg-gradient-to-r from-purple-600 via-teal-400 to-transparent opacity-30 ml-4"></div>
+    </div>
+
+    <!-- Single Experience Card -->
+    <div class="exp-card max-w-3xl mx-auto">
+      <h3 class="text-2xl font-semibold text-white">
+        Web Development Intern <span class="text-purple-400">– Oneyes Infotech Solutions</span>
+      </h3>
+      <p class="text-sm text-gray-300 mt-1">July 2024 – Present (Remote)</p>
+      <p class="text-gray-200 mt-4">
+        Designing and developing a full-stack music course management web application with modern UI and authentication features.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+.exp-card {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+.exp-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.4),
+              0 0 50px rgba(45, 212, 191, 0.4);
+  border-color: rgba(168, 85, 247, 0.6);
+}
+</style>
+
+
+<!-- Projects Section -->
+<section id="Project" class="bg-gray-900 text-white pt-16 pb-20">
+  <div class="max-w-5xl mx-auto px-6">
+    
+    <!-- Section title -->
+    <div class="mb-8 flex items-center gap-4">
+      <h2 class="text-3xl md:text-4xl font-extrabold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-teal-400">
+        Projects
+      </h2>
+      <div class="flex-1 h-px bg-gradient-to-r from-purple-600 via-teal-400 to-transparent opacity-30"></div>
+    </div>
+
+    <!-- Grid - 2 cards per row on large screens -->
+    <div class="grid gap-8 md:grid-cols-2">
+
+      <!-- Example Project Card -->
+      <!-- Landing Page -->
+      <div class="project-card">
+        <img src="images\LandingPage.png" alt="Landing Page Screenshot" class="project-image">
+        <h3 class="project-title">Landing Page</h3>
+        <p class="project-desc">
+          Welcome to My Space in the Digital World — Where Creativity Meets Code. Step In, Connect, and Explore...
+        </p>
+        <div class="tech-stack-title">Tech Stack:</div>
+        <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+        <div class="links">
+          <a href="https://github.com/Sanjana11092004/Landing-Page" target="_blank">GitHub</a>
+          <a href="https://sanjanalandingpage.netlify.app/#" target="_blank">Live Demo</a>
+        </div>
+      </div>
+
+      <!-- ToDo Application -->
+      <div class="project-card">
+        <img src="images\Todo Application.png" alt="ToDo Application Screenshot" class="project-image">
+        <h3 class="project-title">ToDo Application</h3>
+        <p class="project-desc">
+          Transform your daily hustle into smooth flow with TaskMaster Pro. Real-time updates, easy filtering...
+        </p>
+        <div class="tech-stack-title">Tech Stack:</div>
+        <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span></div>
+        <div class="links">
+          <a href="#">GitHub</a> <!-- TODO -->
+          <a href="#">Live Demo</a> <!-- TODO -->
+        </div>
+      </div>
+
+      <!-- MindMate -->
+      <div class="project-card">
+        <img src="images\Mindmate app.png" alt="MindMate Screenshot" class="project-image">
+        <h3 class="project-title">MindMate</h3>
+        <p class="project-desc">
+          Where technology meets empathy — MindMate detects your emotions and offers supportive conversations.
+        </p>
+        <div class="tech-stack-title">Tech Stack:</div>
+        <div class="tags"><span>Java</span><span>Spring Boot</span><span>Sentiment Analysis</span></div>
+        <div class="links">
+          <a href="https://github.com/Sanjana11092004/MindMate">GitHub</a>
+          <a href="#">Live Demo</a> <!-- TODO -->
+        </div>
+      </div>
+
+      <!-- Portfolio -->
+      <div class="project-card">
+        <img src="images\DemoPortfolio.png" alt="Portfolio Screenshot" class="project-image">
+        <h3 class="project-title">Portfolio</h3>
+        <p class="project-desc">
+          Explore my journey through programming — where ideas come to life through clean and purposeful code.
+        </p>
+        <div class="tech-stack-title">Tech Stack:</div>
+        <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+        <div class="links">
+          <a href="#">GitHub</a> <!-- TODO -->
+          <a href="#">Live Demo</a> <!-- TODO -->
+        </div>
+      </div>
+
+      <!-- MusicMaster -->
+      <div class="project-card">
+        <img src="images\MusicMaster.png" alt="MusicMaster Screenshot" class="project-image">
+        <h3 class="project-title">MusicMaster</h3>
+        <p class="project-desc">
+          A music tutorial platform for learning instruments step-by-step with interactive lessons. (Ongoing)
+        </p>
+        <div class="tech-stack-title">Tech Stack:</div>
+        <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span></div>
+        <div class="links">
+          <a href="#">GitHub</a> <!-- TODO -->
+          <a href="#">Live Demo</a> <!-- TODO -->
+        </div>
+      </div>
+
+      <!-- Number Guessing Game -->
+      <div class="project-card">
+        <img src="images\Number Guessing Game.png" alt="Number Guessing Game" class="project-image">
+        <h3 class="project-title">Number Guessing Game</h3>
+        <p class="project-desc">
+          Simple rules. Limited attempts. Endless fun. Every guess counts! Challenge yourself to beat the odds.
+        </p>
+        <div class="tech-stack-title">Tech Stack:</div>
+        <div class="tags"><span>Java</span></div>
+        <div class="links">
+          <a href="#">GitHub</a> <!-- TODO -->
+        </div>
+      </div>
+
+      <!-- Student Grade Calculator -->
+      <div class="project-card">
+        <img src="images\Student grade calculator.png" alt="Student Grade Calculator" class="project-image">
+        <h3 class="project-title">Student Grade Calculator</h3>
+        <p class="project-desc">
+          From marks to mastery — instantly calculate grades and percentages with this smart tool!
+        </p>
+        <div class="tech-stack-title">Tech Stack:</div>
+        <div class="tags"><span>Java</span></div>
+        <div class="links">
+          <a href="#">GitHub</a> <!-- TODO -->
+        </div>
+      </div>
+
+      <!-- Banking Application -->
+      <div class="project-card">
+        <img src="images\Banking application.png" alt="Banking Application" class="project-image">
+        <h3 class="project-title">Banking Application</h3>
+        <p class="project-desc">
+          Built for ease-of-use and robust functionality — demonstrates OOP principles for simple banking operations.
+        </p>
+        <div class="tech-stack-title">Tech Stack:</div>
+        <div class="tags"><span>Java</span></div>
+        <div class="links">
+          <a href="#">GitHub</a> <!-- TODO -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Styles -->
+<style>
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(18px);
+  border-radius: 1rem;
+  border: 2px solid transparent;
+  padding: 1.5rem;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+.project-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  padding: 2px;
+  background: linear-gradient(270deg, #a855f7, #06b6d4, #a855f7);
+  background-size: 400% 400%;
+  animation: gradientMove 5s ease infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.project-card:hover::before {
+  opacity: 1;
+}
+.project-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 0 25px rgba(168,85,247,0.4),
+              0 0 40px rgba(45,212,191,0.4);
+}
+
+/* Image styling */
+.project-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Titles & text */
+.project-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #a855f7, #06b6d4);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.project-desc {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+/* Tech stack section */
+.tech-stack-title {
+  margin-top: 0.8rem;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #ccc;
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.4rem;
+}
+.tags span {
+  background: rgba(255,255,255,0.1);
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+}
+
+/* Links as centered gradient buttons */
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+.links a {
+  background: linear-gradient(to right, #a855f7, #06b6d4);
+  padding: 0.3rem 0.8rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  color: white;
+  transition: transform 0.3s ease;
+}
+.links a:hover {
+  transform: scale(1.05);
+}
+</style>
+
+
+
+
+
+<!-- EDUCATION SECTION -->
+<section id="education" class="bg-gray-900 text-white pt-16 pb-20">
+  <div class="max-w-5xl mx-auto px-6">
+
+    <!-- Section Title -->
+    <div class="mb-8 flex items-center gap-4">
+      <h2 class="text-3xl md:text-4xl font-extrabold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-teal-400">
+        Education
+      </h2>
+      <div class="flex-1 h-px bg-gradient-to-r from-purple-600 via-teal-400 to-transparent opacity-30"></div>
+    </div>
+
+    <!-- Education Grid -->
+    <div class="grid gap-8 md:grid-cols-3">
+      
+      <!-- Card -->
+      <div class="edu-card group backdrop-blur-lg border border-purple-500/30 hover:border-purple-500 transition transform hover:-translate-y-1" style="animation: eduFadeIn 1s 0.1s both;">
+        <div class="edu-content">
+          <span class="edu-year">2022 – 2026</span>
+          <span class="edu-degree">B.E in Computer Science & Engineering</span>
+          <span class="edu-place">Prathyusha Engineering College,<br> Tiruvallur, Tamil Nadu </span>
+        </div>
+      </div>
+
+      <!-- Card -->
+      <div class="edu-card group backdrop-blur-lg border border-purple-500/30 hover:border-purple-500 transition transform hover:-translate-y-1" style="animation: eduFadeIn 1s 0.4s both;">
+        <div class="edu-content">
+          <span class="edu-year">2020 – 2022</span>
+          <span class="edu-degree">Higher Secondary Certificate</span>
+          <span class="edu-place">St. Francis Xavier Anglo-Indian Higher Secondary School,<br>Chennai, Tamil Nadu</span>
+        </div>
+      </div>
+
+      <!-- Card -->
+      <div class="edu-card group backdrop-blur-lg border border-purple-500/30 hover:border-purple-500 transition transform hover:-translate-y-1" style="animation: eduFadeIn 1s 0.7s both;">
+        <div class="edu-content">
+          <span class="edu-year">2010 – 2020</span>
+          <span class="edu-degree">Secondary School Leaving Certificate</span>
+          <span class="edu-place">Our Lady’s Centre Matriculation School,<br>Chennai, Tamil Nadu</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STYLES -->
+<style>
+.edu-card {
+  position: relative;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(18px);
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Pseudo-element for animated gradient border */
+.edu-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 2px; /* Border thickness */
+  border-radius: 1rem;
+  background: linear-gradient(270deg, #a855f7, #06b6d4, #a855f7, #06b6d4);
+  background-size: 400% 400%;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  animation: gradientBorderMove 3s ease infinite;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.edu-card:hover::before {
+  opacity: 1;
+}
+
+.edu-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 0 30px rgba(168,85,247,0.4), 0 0 50px rgba(45,212,191,0.4);
+}
+
+@keyframes gradientBorderMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.edu-content {
+  z-index: 2;
+  position: relative;
+}
+.edu-year {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: .5rem;
+  background: linear-gradient(to right, #a855f7, #06b6d4);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 1px;
+}
+.edu-degree {
+  display: block;
+  font-size: 1.35rem; /* Keep same size from before, or increase if you want */
+  font-weight: 700;
+  color: white;
+  margin-bottom: .5rem;
+}
+
+.edu-place {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  line-height: 1.4;
+}
+
+@keyframes eduFadeIn {
+  0% { opacity: 0; transform: translateY(40px) scale(0.95);}
+  75% { opacity: 1; transform: translateY(-4px) scale(1.02);}
+  100% { opacity: 1; transform: translateY(0px) scale(1);}
+}
+</style>
+
+
+
+
+
+
+<!-- Certificates Section -->
+<section id="certificates" class="bg-gray-900 text-white pt-16 pb-20">
+  <div class="max-w-5xl mx-auto px-6">
+    
+    <!-- Section title -->
+    <div class="mb-8 flex items-center gap-4">
+      <h2 class="text-3xl md:text-4xl font-extrabold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-teal-400">
+        Certificates
+      </h2>
+      <div class="flex-1 h-px bg-gradient-to-r from-purple-600 via-teal-400 to-transparent opacity-30 ml-4"></div>
+    </div>
+    
+    <!-- Outer wrapper to center -->
+    <div class="flex justify-center">
+      
+      <!-- Glass card with glow hover -->
+      <div class="cert-card bg-white/10 backdrop-blur-lg border border-purple-500/30 rounded-2xl p-10 max-w-3xl text-center transition-transform duration-300">
+        
+        <!-- Heading -->
+        <h2 class="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-500 to-teal-400 bg-clip-text text-transparent">
+          My Achievements
+        </h2>
+
+        <!-- Description -->
+        <p class="text-gray-300 max-w-2xl mx-auto mb-8">
+          I am always eager to participate in various technical and non-technical events,
+          consistently learning and expanding my skill set.
+          Here’s a collection of my proudest certifications and recognitions.
+        </p>
+
+        <!-- Button -->
+        <a href="certificates.html" 
+           class="bg-gradient-to-r from-purple-500 to-teal-400 text-white px-6 py-3 rounded-full shadow-lg hover:scale-105 transition-transform duration-300">
+          View Certificates
+        </a>
+      
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Styles -->
+<style>
+.cert-card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+.cert-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 0 30px rgba(168,85,247,0.4),
+              0 0 50px rgba(45,212,191,0.4);
+  border-color: rgba(168,85,247,0.6);
+}
+</style>
+
+
+
+
+
+<!-- Contact Section -->
+<section id="contact" class="bg-gray-900 text-white pt-16 pb-20">
+  <div class="max-w-5xl mx-auto px-6">
+    
+    <!-- Section Title -->
+    <div class="mb-8 flex items-center gap-4">
+      <h2 class="text-3xl md:text-4xl font-extrabold tracking-wide text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-teal-400">
+        Contact
+      </h2>
+      <div class="flex-1 h-px bg-gradient-to-r from-purple-600 via-teal-400 to-transparent opacity-30 ml-4"></div>
+    </div>
+
+    <!-- Contact Form -->
+    <form id="contact-form" class="max-w-lg mx-auto bg-white/10 p-8 rounded-xl backdrop-blur-md shadow-lg">
+      <div class="mb-4">
+        <input type="text" name="from_name" placeholder="Your Name" required
+          class="w-full p-3 rounded-lg bg-white/5 border border-gray-400 text-white placeholder-gray-400 
+          focus:outline-none focus:border-purple-500">
+      </div>
+      <div class="mb-4">
+        <input type="email" name="from_email" placeholder="Your Email" required
+          class="w-full p-3 rounded-lg bg-white/5 border border-gray-400 text-white placeholder-gray-400 
+          focus:outline-none focus:border-purple-500">
+      </div>
+      <div class="mb-4">
+        <textarea name="message" placeholder="Your Message" rows="4" required
+          class="w-full p-3 rounded-lg bg-white/5 border border-gray-400 text-white placeholder-gray-400 
+          focus:outline-none focus:border-purple-500"></textarea>
+      </div>
+      <button type="submit"
+        class="w-full py-3 bg-gradient-to-r from-purple-500 to-teal-400 rounded-lg hover:opacity-90 
+        transition font-semibold">
+        Send Message
+      </button>
+    </form>
+
+    <!-- Feel free to reach out -->
+    <p class="mt-10 text-lg font-medium text-gray-300 text-center">
+      Thank you for visiting my Portfolio. <br />Feel free to reach out
+    </p>
+
+    <!-- Social Links -->
+    <div class="mt-6 flex justify-center gap-8">
+      <a href="https://github.com/Sanjana11092004" target="_blank"
+        class="text-gray-400 transition duration-300 transform hover:-translate-y-1 text-3xl hover:text-transparent 
+        hover:bg-clip-text hover:gradient-theme">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/damarla-sanjana/" target="_blank"
+        class="text-gray-400 transition duration-300 transform hover:-translate-y-1 text-3xl hover:text-transparent 
+        hover:bg-clip-text hover:gradient-theme">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="mailto:damarlasanjana0411@gmail.com"
+        class="text-gray-400 transition duration-300 transform hover:-translate-y-1 text-3xl hover:text-transparent 
+        hover:bg-clip-text hover:gradient-theme">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+  </div>
+</section>
+
+<!-- EmailJS SDK -->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+
+<script>
+  emailjs.init('5oxoeV42codRuDUYf');
+  document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    emailjs.sendForm('service_n1yfv3u', 'template_2eyqo3t', this)
+      .then(function() {
+        alert('sent!');
+      }, function(error) {
+        alert('error');
+        console.log(error);
+      });
+  });
+</script>
+
+
+
+
+<footer class="w-full">
+  <div class="animated-gradient backdrop-blur-md bg-clip-padding bg-opacity-70 shadow-lg border-t border-white/20 py-4 flex justify-center items-center text-center">
+    <span class="text-white text-sm md:text-base font-medium tracking-wide drop-shadow">
+      © 2025 DAMARLA SANJANA. All rights reserved.
+    </span>
+  </div>
+</footer>
+
+
+
+
+<script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('mobile-menu');
+
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
+
+
+
+
+</body>
+</html>
